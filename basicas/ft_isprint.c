@@ -6,14 +6,16 @@
 /*   By: guvargas <guvargas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/18 11:49:51 by guvargas          #+#    #+#             */
-/*   Updated: 2022/06/19 11:52:45 by guvargas         ###   ########.fr       */
+/*   Updated: 2022/06/19 22:19:06 by guvargas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprintf(int c)
+int	ft_isprint(int c)
 {
-    if( c > 31 && c < 127) return (1);
-    else return (0);
+	if (c > 31 && c < 127)
+		return (1);
+	else
+		return (0);
 }

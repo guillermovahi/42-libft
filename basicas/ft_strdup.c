@@ -6,13 +6,13 @@
 /*   By: guvargas <guvargas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/18 12:21:08 by guvargas          #+#    #+#             */
-/*   Updated: 2022/06/19 12:04:15 by guvargas         ###   ########.fr       */
+/*   Updated: 2022/06/19 22:12:03 by guvargas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(char *src)
+char	*ft_strdup(const char *src)
 {
 	char	*dest;
 	int		c;

@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: guvargas <guvargas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/18 13:26:59 by guvargas          #+#    #+#             */
-/*   Updated: 2022/06/19 12:07:47 by guvargas         ###   ########.fr       */
+/*   Created: 2022/06/18 13:30:06 by guvargas          #+#    #+#             */
+/*   Updated: 2022/06/20 00:25:20 by guvargas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char **ft_split(char const *s, char c)
+void	ft_putstr_fd(char *s, int fd)
 {
-    
+	write(fd, s, ft_strlen(s));
 }

@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: guvargas <guvargas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/18 13:29:42 by guvargas          #+#    #+#             */
-/*   Updated: 2022/06/19 12:09:28 by guvargas         ###   ########.fr       */
+/*   Created: 2022/06/18 13:30:38 by guvargas          #+#    #+#             */
+/*   Updated: 2022/06/20 18:57:24 by guvargas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putchar_fd(char c, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
-
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n',fd);
 }

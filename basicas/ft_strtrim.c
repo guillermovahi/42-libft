@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: guvargas <guvargas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/18 13:30:06 by guvargas          #+#    #+#             */
-/*   Updated: 2022/06/19 12:09:51 by guvargas         ###   ########.fr       */
+/*   Created: 2022/06/18 13:26:37 by guvargas          #+#    #+#             */
+/*   Updated: 2022/06/20 16:29:44 by guvargas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putstr_fd(char *s, int fd)
+char *ft_strtrim(char const *s1, char const *set)
 {
-
+    char const *p = s1;
+    char const *s =  set;
+    p = s;
+    return (char *)p;
 }
