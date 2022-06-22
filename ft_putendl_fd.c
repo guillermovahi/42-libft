@@ -1,21 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: guvargas <guvargas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/18 13:26:37 by guvargas          #+#    #+#             */
-/*   Updated: 2022/06/20 16:29:44 by guvargas         ###   ########.fr       */
+/*   Created: 2022/06/18 13:30:38 by guvargas          #+#    #+#             */
+/*   Updated: 2022/06/21 11:38:29 by guvargas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strtrim(char const *s1, char const *set)
+void	ft_putendl_fd(char *s, int fd)
 {
-    char const *p = s1;
-    char const *s =  set;
-    p = s;
-    return (char *)p;
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }

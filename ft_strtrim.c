@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: guvargas <guvargas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/30 17:25:20 by guvargas          #+#    #+#             */
-/*   Updated: 2022/06/19 11:56:51 by guvargas         ###   ########.fr       */
+/*   Created: 2022/06/18 13:26:37 by guvargas          #+#    #+#             */
+/*   Updated: 2022/06/22 00:20:42 by guvargas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	unsigned int	i;
-	unsigned int	counter;
+	size_t	i;
+	size_t	size;
+	char	*str;
 
-	i = 0;
-	counter = 0;
-	if (size != 0)
+	str = 0;
+	if (s1 != 0 && set != 0)
 	{
-		while ((src[i] != '\0') && (i < size - 1))
-		{
-			dest[i] = src[i];
-			i ++;
-		}
-		dest[i] = '\0';
+		i = 0;
+		size = ft_strlen(s1);
+		while (s1[i] && ft_strchr(set, s1[i]))
+			i++;
+		while (s1[size - 1] && ft_strchr(set, s1[size - 1]) && size > i)
+			size--;
+		str = (char *) malloc(sizeof(char) * (size - i + 1));
+		if (str == NULL)
+			return (NULL);
+		ft_strlcpy(str, &s1[i], size - i + 1);
 	}
-	while (src[counter] != '\0')
-	{
-		counter++;
-	}
-	return (counter);
+	return (str);
 }

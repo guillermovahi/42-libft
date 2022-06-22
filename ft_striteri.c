@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: guvargas <guvargas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/19 12:21:39 by guvargas          #+#    #+#             */
-/*   Updated: 2022/06/19 12:22:04 by guvargas         ###   ########.fr       */
+/*   Created: 2022/06/18 13:29:13 by guvargas          #+#    #+#             */
+/*   Updated: 2022/06/21 23:39:31 by guvargas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-    
+	int	i;
+
+	i = -1;
+	while (s[++i])
+		f(i, &s[i]);
 }
