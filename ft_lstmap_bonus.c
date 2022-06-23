@@ -14,8 +14,12 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
+
 	t_list	*ptr;
 
+	if (!lst || !f)
+		return (NULL);
+	(void)del;
 	ptr = (t_list *) malloc(sizeof(t_list));
 	if (ptr == NULL)
 		return (NULL);

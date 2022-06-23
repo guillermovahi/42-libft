@@ -15,12 +15,18 @@
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t	i;
-	void	*aux;
 
-	aux = malloc(len);
-	aux = ft_memcpy(aux, ((const void *)src), len);
-	i = -1;
-	while (++i < len)
-		((char *)dst)[i] = ((char *)aux)[i];
-	return ((char *)dst);
+	if (!dst && !src)
+		return (NULL);
+	i = 0;
+	if (dst > src)
+		while (len-- > 0)
+			((char *)dst)[len] = ((char *)src)[len];
+	else
+		while (i < len)
+		{
+			((char *)dst)[i] = ((char *)src)[i];
+			i++;
+		}
+	return (dst);
 }

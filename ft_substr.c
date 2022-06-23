@@ -17,6 +17,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*ptr;
 	int		j;
 
+	if (!s)
+		return (NULL);
+	if (start >= ft_strlen(s))
+	  	return ft_strdup("");
 	ptr = (char *) malloc(sizeof(char) * (len + 1));
 	if (ptr == NULL)
 		return (NULL);

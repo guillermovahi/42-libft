@@ -97,9 +97,13 @@ char	**ft_split(char const *s, char c)
 	size_t	i;
 	int		words;
 
+	if (!s)
+		return (NULL);
 	words = 1;
 	double_array_size = n_words(s, c);
 	arr_of_strings = (char **) malloc(sizeof(char *) * (double_array_size + 1));
+	if (arr_of_strings == NULL)
+		return (NULL);
 	i = -1;
 	while (++i < double_array_size)
 		arr_of_strings[i] = mem_fill1(s, c, words++);
